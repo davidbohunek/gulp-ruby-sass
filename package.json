@@ -41,7 +41,7 @@
   ],
   "dependencies": {
     "convert-source-map": "^0.5.0",
-    "dargs": "^2.0.3",
+    "dargs": "^4.0.0",
     "each-async": "^1.0.0",
     "glob": "^4.0.2",
     "gulp-util": "^3.0.0",

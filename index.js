@@ -1,5 +1,4 @@
 'use strict';
-
 var fs = require('fs');
 var path = require('path');
 var glob = require('glob');
@@ -74,15 +73,18 @@ module.exports = function (source, options) {
 		compileMappings = [ source, destFile ];
 		mkdirp(destDir);
 	}
+
 	// TODO: implement glob file source
 
-	args = dargs(options, [
-		'bundleExec',
-		'watch',
-		'poll',
-		'container',
-		'verbose'
-	]).concat(compileMappings);
+	args = dargs(options, {
+		excludes: [
+			'bundleExec',
+			'watch',
+			'poll',
+			'container',
+			'verbose'
+		]
+	}).concat(compileMappings);
 
 	if (options.bundleExec) {
 		command = 'bundle';
